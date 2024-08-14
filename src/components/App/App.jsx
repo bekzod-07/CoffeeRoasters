@@ -1,11 +1,16 @@
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "../Home/Home";
+import AboutUs from "../AboutUs/AboutUs";
+import CreatePlan from "../CreatePlan/CreatePlan";
 
-function App() {
-  return (
-      <div>
-        <h1>CoffeeRoasters</h1>
-      </div>
-  );
+export default function App() {
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/aboutus" element={<AboutUs />} />
+                <Route path="/createplan" element={<CreatePlan />} />
+            </Routes>
+        </Router>
+    );
 }
-
-export default App;
